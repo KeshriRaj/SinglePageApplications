@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
     this.loginData.push(this.stockForm.value);
     localStorage.setItem("Login",JSON.stringify(this.loginData));
     alert("Account Sucessfully Created")
-    this.router.navigate(['/login']);
+    this.router.navigateByUrl('/login');
   }
 
 }

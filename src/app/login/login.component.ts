@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
 
       // if(this.userDetails[i].email=this.userForm.value.email && this.userDetails[i].psw1==this.userForm.value.psw)
       // {
-        this.router.navigate(['/forms']);
+        this.router.navigateByUrl('/forms');
       // }
     }
 

@@ -36,7 +36,7 @@ export class FormsComponent implements OnInit {
      let json=JSON.stringify(this.get_data);
      localStorage.setItem("StockData",json);
      alert("Sucessfuly Updated to Local Storage");
-     this.router.navigate(['/tables']);
+     this.router.navigateByUrl('/tables');
    }
  }
   x="";

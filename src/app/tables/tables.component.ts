@@ -49,7 +49,7 @@ export class TablesComponent implements OnInit {
 
   }
   addrows(){
-    this.router.navigate(['/forms']);
+    this.router.navigateByUrl('/forms');
   }
 
 }

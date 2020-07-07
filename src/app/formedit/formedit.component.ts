@@ -58,7 +58,7 @@ export class FormeditComponent implements OnInit {
     let json=JSON.stringify(this.finalData);
     localStorage.setItem("StockData",json);
     alert("Sucessfuly Edited");
-     this.router2.navigate(['/tables']);
+     this.router2.navigateByUrl('/tables');
   }
 
 }
