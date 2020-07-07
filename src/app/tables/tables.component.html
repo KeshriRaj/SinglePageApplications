@@ -1,0 +1,145 @@
+
+<body [ngStyle]="{backgroundImage:'url(./assets/stock.jpg)'}" [style.height.px]="736">
+
+  <div  class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div  [style.height.px]="570" class="row">
+              <div class="col-lg-12" id="stock">
+                <div class="p-5">
+                  <div class="text-center">
+                    <h1 class="h3 text-white-900 mb-4"><img [style.width.px]="50"src="./assets/download.svg" (click)="addrows()">
+                        Welcome to Stock Exchange</h1>
+                  </div>
+                  <div id="wrapper">
+
+                    <!-- Sidebar -->
+                    <!-- --> 
+                    <!-- End of Sidebar -->
+                
+                    <!-- Content Wrapper -->
+                    <div id="content-wrapper" class="d-flex flex-column">
+                
+                      <!-- Main Content -->
+                      <div id="content">
+                
+                        <!-- Topbar -->
+                       
+                        <!-- End of Topbar -->
+                
+                        <!-- Begin Page Content -->
+                        <div class="container-fluid">
+                
+                          <!-- Page Heading -->
+                         
+                          <div>
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">Stock Table</h6>
+                            </div>
+                            <div class="card-body">
+                              <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Price</th>
+                                      <th>Stock</th>
+                                      <th>Edit</th>
+                                      <th>Delete</th>
+                                    </tr>
+                                  <tbody>
+                                    <tr *ngFor="let data of get_data;let i=index">
+                                      <td>{{data.name}}</td>
+                                      <td>{{data.price}}</td>
+                                      <td>{{data.stock}}</td>
+                                      <td><button type="button" class="btn btn-warning" (click)="editrows(i)">Edit</button></td>
+                                      <td><button type="button" class="btn btn-danger" (click)="deleterows(i)">Delete</button></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                
+                        </div>
+                        <!-- /.container-fluid -->
+                
+                      </div>
+                      <!-- End of Main Content -->
+                
+                      <!-- Footer -->
+                      
+                      <!-- End of Footer -->
+                
+                    </div>
+                    <!-- End of Content Wrapper -->
+                
+                  </div>
+                  <!-- End of Page Wrapper -->
+                
+                  <!-- Scroll to Top Button-->
+                  <a class="scroll-to-top rounded" href="#page-top">
+                    <i class="fas fa-angle-up"></i>
+                  </a>
+                
+                  <!-- Logout Modal-->
+                  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                          <a class="btn btn-primary" href="login.html">Logout</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                 
+                </div>
+              </div>
+               <!-- <div class="col-lg-6">
+                 <img src="./assets/stock.jpg" alt="stock"/>
+             </div>  -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+  
+
+  <!-- Bootstrap core JavaScript-->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- Core plugin JavaScript-->
+  <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
+
+  <!-- Custom scripts for all pages-->
+  <!-- <script src="js/sb-admin-2.min.js"></script> -->
+
+  <!-- Page level plugins -->
+  <!-- <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script> -->
+
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/datatables-demo.js"></script> -->
