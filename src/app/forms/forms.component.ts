@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators, FormGroup } from '@angular/forms';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -21,6 +21,7 @@ export class FormsComponent implements OnInit {
 
  get_data=[];
  submitForm(){
+   console.log("Hello");
    if(this.stockForm.valid)
    {
      console.log(this.stockForm.value);

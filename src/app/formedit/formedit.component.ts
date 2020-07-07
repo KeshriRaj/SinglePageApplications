@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import { FormBuilder,Validators, FormGroup } from '@angular/forms';
-import { Router } from '@angular/Router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formedit',
