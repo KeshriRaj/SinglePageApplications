@@ -26,17 +26,15 @@ export class FormsComponent implements OnInit {
    {
      console.log("Inside Hello");
      console.log(this.stockForm.value);
-     this.stockDetails.push(this.stockForm.value);
-     console.log(this.stockDetails);
+    //  this.stockDetails.push(this.stockForm.value);
+    //  console.log("stock Details",this.stockDetails);
      
-    //  this.get_data=JSON.parse(localStorage.getItem("StockData"));
-    //  for(var i=0;i<this.stockDetails.length;i++)
-    //  {
-    //  this.get_data.push(this.stockDetails[i]);
-    //  }
-    //  console.log(this.get_data);
-    //  let json=JSON.stringify(this.get_data);
-    //  localStorage.setItem("StockData",json);
+     this.get_data=JSON.parse(localStorage.getItem("StockData"));
+     this.get_data.push(this.stockForm.value);
+     
+     console.log(this.get_data);
+     let json=JSON.stringify(this.get_data);
+     localStorage.setItem("StockData",json);
      alert("Sucessfuly Updated to Local Storage");
      this.router.navigateByUrl('/tables');
    }
