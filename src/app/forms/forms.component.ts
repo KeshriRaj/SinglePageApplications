@@ -24,6 +24,7 @@ export class FormsComponent implements OnInit {
    console.log("Hello");
    if(this.stockForm.valid)
    {
+     console.log("Inside Hello");
      console.log(this.stockForm.value);
      this.stockDetails.push(this.stockForm.value);
      console.log(this.stockDetails);
